@@ -1,0 +1,16 @@
+<view class="container">
+  <view class='search-flex {{scrolltop>200?"tophide":""}}'>
+    <view class='search'>
+      <input class='input' type='text' placeholder='请输入关键字查询' bindinput='inputSearch'></input>
+      <button bindtap='search' wx:if="{{isSearch}}">搜索</button>
+    </view>
+    <button class='search-extra-btn'>服务商入驻</button>
+  </view>
+  <view class='filter-flex'>
+    <view  class='filter-tab'>
+      <text bindtap='setFilterPanel' data-findex="1" class='{{showfilterindex==1?"active":""}}'>服务类别</text>   
+      <text bindtap='setFilterPanel' data-findex="2" class='{{showfilterindex==2?"active":""}}'>服务城市</text>
+    </view>
+  </view>
+</view>
+
